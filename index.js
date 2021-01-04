@@ -14,13 +14,14 @@ function digital_root(n) {
   if(ansArr.length === 1){
     let ansStr = ansArr.join("")
     let ans = +ansStr
+    console.log(ans);
     return (ans);
   } else {
     let valStr = ansArr.join("")
     let val = +valStr
-    digital_root(val)
+   return digital_root(val)
   }
   
 }
 
-digital_root(942)
+digital_root(456)
