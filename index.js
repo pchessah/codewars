@@ -1,25 +1,19 @@
-//Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010)
-// and After Earth (2013). Jaden is also known for some of his philosophy that he delivers
-// via Twitter. When writing on Twitter, he is known for almost always capitalizing every 
-//word. For simplicity, you'll have to capitalize each word, check out how contractions 
-//are expected to be in the example below.
-//Your task is to convert strings to how they would be written by Jaden Smith.
-//The strings are actual quotes from Jaden Smith, but they are not capitalized in the
-// same way he originally typed them.
-
-// @ts-ignore
-String.prototype.toJadenCase = function () {
-  let arr = this.split(" ")
-  for(let i=0; i<arr.length; i++){
-    
+function sumArray(array) {
+  if(array == null){
+    return 0
   }
+  if(array.length<2){
+    return 0
+  } else {
+    let highestValue = Math.max(...array)
+    let lowestValue = Math.min(...array)
+    let arrayWithoutHighAndLow = array.filter(item =>{
+      return item !== highestValue && item !== lowestValue
+    });
+    let ans = arrayWithoutHighAndLow.reduce((a,b)=>a+b,0)
+    return ans;
+  }
+}
 
-  let ans= arr.map(item => item[0].toUpperCase()+item.substr(1)).join(" ");
-  return(ans);
-      
-  //...
-};
 
-var str = "How can mirrors be real if our eyes aren't real";
-// @ts-ignore
-str.toJadenCase()
+sumArray([ 6, 2, 1, 8, 10 ])
