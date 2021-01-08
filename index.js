@@ -17,3 +17,5 @@ function sumArray(array) {
 
 
 sumArray([ 6, 2, 1, 8, 10 ])
+
+//still not working
