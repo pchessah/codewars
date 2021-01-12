@@ -20,3 +20,15 @@ function enough(cap, on, wait) {
 }
 
 //CHECK CAPACITY OF PEOPLE IN THE BUS
+
+
+function booleanToString(b){
+  if(b === true){
+    return "true"
+  } else {
+    return  "false"
+  }
+  //your code here
+}
+
+//BOOLEAN CHECKER
