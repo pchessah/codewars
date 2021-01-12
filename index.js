@@ -8,3 +8,15 @@ var summation = function (num) {
 }
 
 //SUM ALL NUMBERS TO NUM
+
+
+function enough(cap, on, wait) {
+  if((cap - on)>=wait){
+    return 0
+  } else {
+    return Math.abs((cap-on)-wait)
+  }
+  // your code here
+}
+
+//CHECK CAPACITY OF PEOPLE IN THE BUS
