@@ -1,9 +1,10 @@
-function check(a, x) {
-  if(a.includes(x)){
-    return true
-  } else {
-    return false
+var summation = function (num) {
+  let sum = 0
+  for(let i = 0; i <num+1; i++){
+    sum = sum + i    
   }
+  return sum
+  // Code here
 }
 
-//CHECK IF ITEM IS IN ARRAY
+//SUM ALL NUMBERS TO NUM
