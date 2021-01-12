@@ -32,3 +32,9 @@ function booleanToString(b){
 }
 
 //BOOLEAN CHECKER
+
+function sumMix(x){
+  return x.map(a => +a).reduce((a, b) => a + b);
+}
+
+//CONVERT ALL ITEMS TO NUMBERS THEN DO SUM IN ARRAY
