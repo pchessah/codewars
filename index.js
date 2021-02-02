@@ -1,40 +1,25 @@
-var summation = function (num) {
-  let sum = 0
-  for(let i = 0; i <num+1; i++){
-    sum = sum + i    
+function toWeirdCase(string){
+  function convert(word){
+    let wordArr = word.split("")
+    
+    let ans = wordArr.map((item, index) => {
+      if(index%2 ==0){
+        return item.toUpperCase()
+      } else {
+        return item.toLowerCase()
+      }
+    })
+    return ans.join("")
   }
-  return sum
-  // Code here
-}
-
-//SUM ALL NUMBERS TO NUM
-
-
-function enough(cap, on, wait) {
-  if((cap - on)>=wait){
-    return 0
-  } else {
-    return Math.abs((cap-on)-wait)
+  let stringArr = string.split(" ")
+  let ansArr = []
+  for(let i=0; i<stringArr.length; i++){
+    ansArr = [...ansArr, convert(stringArr[i])]
   }
-  // your code here
+  return(ansArr.join(" "));
+
+  //TODO
 }
 
-//CHECK CAPACITY OF PEOPLE IN THE BUS
-
-
-function booleanToString(b){
-  if(b === true){
-    return "true"
-  } else {
-    return  "false"
-  }
-  //your code here
-}
-
-//BOOLEAN CHECKER
-
-function sumMix(x){
-  return x.map(a => +a).reduce((a, b) => a + b);
-}
-
-//CONVERT ALL ITEMS TO NUMBERS THEN DO SUM IN ARRAY
+toWeirdCase('This')
+toWeirdCase( "Weird string case" )
